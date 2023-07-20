@@ -23,10 +23,10 @@ function calculateBMI() {
  
     // check user memasukan benar atau tidak
     if (height === "" || isNaN(height))
-        result.innerHTML = "Provide a valid Height!";
+        result.innerHTML = `<small><small><small><small><small><small>Provide a valid Height!</small></small></small></small></small></small>`;
  
     else if (weight === "" || isNaN(weight))
-        result.innerHTML = "Provide a valid Weight!";
+        result.innerHTML = `<small><small><small><small><small><small>Provide a valid Weight!</small></small></small></small></small></small>`;
  
     // 2 2 nya berhasil, langsung dihitung
     else {
@@ -34,26 +34,26 @@ function calculateBMI() {
         let bmi = (weight / ((height * height)
                             / 10000)).toFixed(2);
  
-        result.innerHTML = `<span>${bmi}</span>`;
+        result.innerHTML = `<span class="bmi-container">${bmi}</span>`;
 
         if (bmi < 18.5) {
-        result.innerHTML = `<span>${bmi}</span>`;
+        result.innerHTML = `<span class="bmi-container">${bmi}</span>`;
         status.innerHTML = `<span class="badge badge-info">UNDERWEIGHT</span>`; 
  
         } else if (bmi >= 18.5 && bmi < 22.9) {
-        result.innerHTML = `<span>${bmi}</span>`;
+        result.innerHTML = `<span class="bmi-container">${bmi}</span>`;
         status.innerHTML = `<span class="badge badge-success">NORMAL</span>`; 
  
         } else if (bmi >= 23 && bmi < 24.9) {
-        result.innerHTML = `<span>${bmi}</span>`;
+        result.innerHTML = `<span class="bmi-container">${bmi}</span>`;
         status.innerHTML = `<span class="badge badge-warning">RISK TO OVERWEIGHT</span>`; 
  
         } else if (bmi >= 25 && bmi < 29.9) {
-        result.innerHTML = `<span>${bmi}</span>`;
+        result.innerHTML = `<span class="bmi-container">${bmi}</span>`;
         status.innerHTML = `<span class="badge badge-oren">OVERWEIGHT</span>`; 
  
         } else {
-        result.innerHTML = `<span>${bmi}</span>`;
+        result.innerHTML = `<span class="bmi-container">${bmi}</span>`;
         status.innerHTML = `<span class="badge badge-danger">OBESE</span>`; 
         }
     }
