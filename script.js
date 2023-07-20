@@ -1,12 +1,13 @@
 window.onload = () => {
     let button = document.querySelector("#btn");
  
-    // Function for calculating BMI
+    // Function buat menjalankan kalkukaltor
     button.addEventListener("click", calculateBMI);
 };
  
 function calculateBMI() {
  
+    // mendapatkan inputan tinggi dan berat user
     let height = parseInt(document
             .querySelector("#tinggi").value);
  
@@ -16,19 +17,23 @@ function calculateBMI() {
     let result = document.querySelector("#result");
     let status = document.querySelector("#status");
  
+    // check user memasukan benar atau tidak
     if (height === "" || isNaN(height))
         result.innerHTML = "Provide a valid Height!";
  
     else if (weight === "" || isNaN(weight))
         result.innerHTML = "Provide a valid Weight!";
  
+    // 2 2 nya berhasil, langsung dihitung
     else {
- 
+        
+         // rumus perhitungan
         let bmi = (weight / ((height * height)
                             / 10000)).toFixed(2);
  
         result.innerHTML = `<span>${bmi}</span>`;
 
+        // membagi per kondisi jumlah bmi yang didapat
         if (bmi < 18.5) {
         result.innerHTML = `<span>${bmi}</span>`;
         status.innerHTML = `<span class="badge badge-info">UNDERWEIGHT</span>`; 
