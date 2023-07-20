@@ -4,6 +4,10 @@ window.onload = () => {
     // Function buat menjalankan kalkukaltor
     button.addEventListener("click", calculateBMI);
 };
+
+$(window).on("load", function() {
+    $(".loader-wrapper").fadeOut("slow");
+});
  
 function calculateBMI() {
  
