@@ -585,24 +585,24 @@
     color: #63656b;
   }
   
-  /* cart */
-  .cart {
+  /* kalkulator */
+  .kalkulator {
     border-radius: 19px 19px 7px 7px;
   }
   
-  .cart .products {
+  .kalkulator .products {
     display: flex;
     flex-direction: column;
     padding: 10px;
   }
   
-  .cart .products .product {
+  .kalkulator .products .product {
     display: grid;
     grid-template-columns: 60px 1fr 80px 1fr;
     gap: 10px;
   }
   
-  .cart .products .product span {
+  .kalkulator .products .product span {
     font-size: 13px;
     font-weight: 600;
     color: #47484b;
@@ -610,7 +610,7 @@
     display: block;
   }
   
-  .cart .products .product p {
+  .kalkulator .products .product p {
     font-size: 11px;
     font-weight: 600;
     color: #7a7c81;
