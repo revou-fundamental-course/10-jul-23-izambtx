@@ -6,95 +6,124 @@
     <title>Kalkulator BMI</title>
     <link type="text/css" href="css/style.css" rel="stylesheet">
 </head>
-<body>
-    <div class="row">
-        <div class="container my-5">
-          <div class="master-container">
-            <div class="card cart">
-              <label class="title">Kalkulator BMI</label>
-              <div class="row">
-                <div class="col-6">
-                    <img src="img/BMI-1024x569.png" style="width: 100%;" alt="BMI Pic" srcset="">
-                </div>
-                <div class="col-6">
-                  <div class="pack-container">
-                    <div class="header">
-                      <p class="title-hasil">
-                        Hasil
-                      </p>
-                      <div class="price-container" id="result">
-                        0
-                      </div>
-                    </div>
-                    <div>
-                      <p class="text-center">Anda memiliki berat badan 
-                        <br>
-                        <span id="status"><span class="badge badge-dark">STATUS</span></span>
-                      </p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          
-            <div class="row">
-              <div class="card checkout col-5">
-                <label class="title">Personal Data</label>
-                <form class="form p-3" method="post">
-                  <div class="row">
-                    <div class="col">
-                      <label for="berat"><b>Berat Badan (KG)</b></label>
-                      <div class="input-group">
-                        <input type="number"  autocomplete="off" name="text" class="input" id="berat">
-                      </div>
-                    </div>
-                    <div class="col">
-                      <label for="tinggi"><b>Tinggi Badan (CM)</b></label>
-                      <div class="input-group">
-                        <input type="number"  autocomplete="off" name="text" class="input" id="tinggi">
-                      </div>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="col">
-                      <button type="button" id="btn" class="mt-3 btn btn-primary btn-block rounded-sm">Hitung BMI</button>
-                    </div>
-                    <div class="col">
-                      <button type="reset" class="mt-3 btn btn-light btn-block rounded-sm">Reset BMI</button>
-                    </div>
-                  </div>
-                </form>
-              </div>
-              <div class="card info col-6 ml-5">
-                <label class="title">Additional Info</label>
+<div class="area" id="contentBMI">
+    <ul class="circles">
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+        <li></li>
+    </ul>
+  <body>
+      <div class="row">
+          <div class="container my-5">
+            <div class="master-container">
+              <div class="card cart">
+                <label class="title">Kalkulator BMI</label>
                 <div class="row">
-                  <div class="col-5">
-                    <p style="margin-left: 0.4rem;"><b>Beberapa Penyakit Obese : </b></p>
-                    <ul>
-                      <li>Diabetes</li>
-                      <li>Hipertensi</li>
-                      <li>Sakit Jantung</li>
-                      <li>Osteoarthritis</li>
-                    </ul>
+                  <div class="col-6">
+                      <img src="img/BMI-1024x569.png" style="width: 100%;" alt="BMI Pic" srcset="">
                   </div>
-                  <div class="col-7">
-                    <p style="margin-left: 0.4rem;"><b>Langkah-Langkah Diet : </b></p>
-                    <ul>
-                      <li>Berolahraga Minimal 30 Menit.</li>
-                      <li>Konsumsi Sayur dan Buah-Buahan</li>
-                      <li>Memperhatikan Ukuran Porsi Makanan.</li>
-                    </ul>
+                  <div class="col-6">
+                    <div class="kalkulator-container">
+                      <div class="header">
+                        <p class="title-hasil">
+                          Hasil
+                        </p>
+                        <div class="bmi-container" id="result">
+                          0
+                        </div>
+                        <button class="btn btn-sm btn-light rounded-sm" id="downloadBMI" style="margin-top: 0.5rem;">Download BMI</button>
+                      </div>
+                      <div class="text-center" style="margin: 0;">
+                        <p style="margin: 0;">
+                          Anda memiliki berat badan 
+                          <br>
+                          <span id="status"><span class="badge badge-dark">STATUS</span></span>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+              <div class="row">
+                <div class="card checkout col-5">
+                  <label class="title">Personal Data</label>
+                  <form class="form p-3" method="post">
+                    <div class="row">
+                      <div class="col">
+                        <label for="berat"><b>Berat Badan (KG)</b></label>
+                        <div class="input-group">
+                          <input type="number"  autocomplete="off" name="text" class="input" id="berat">
+                        </div>
+                      </div>
+                      <div class="col">
+                        <label for="tinggi"><b>Tinggi Badan (CM)</b></label>
+                        <div class="input-group">
+                          <input type="number"  autocomplete="off" name="text" class="input" id="tinggi">
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col">
+                        <button type="button" id="btn" class="mt-3 btn btn-primary btn-block rounded-sm">Hitung BMI</button>
+                      </div>
+                      <div class="col">
+                        <button type="reset" class="mt-3 btn btn-light btn-block rounded-sm">Reset BMI</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="card info col-6 ml-5">
+                  <label class="title">Additional Info</label>
+                  <div class="row">
+                    <div class="col-5">
+                      <p style="margin-left: 0.4rem;"><b>Beberapa Penyakit Obese : </b></p>
+                      <ul>
+                        <li>Diabetes</li>
+                        <li>Hipertensi</li>
+                        <li>Sakit Jantung</li>
+                        <li>Osteoarthritis</li>
+                      </ul>
+                    </div>
+                    <div class="col-7">
+                      <p style="margin-left: 0.4rem;"><b>Langkah-Langkah Diet : </b></p>
+                      <ul>
+                        <li>Berolahraga Minimal 30 Menit.</li>
+                        <li>Konsumsi Sayur dan Buah-Buahan</li>
+                        <li>Memperhatikan Ukuran Porsi Makanan.</li>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-    </div>
-    
-    <a class="mark">
-      @izam.susilo
-    </a>
-    <script src="js/script.js"></script>
-</body>
+      </div>
+      
+      <a class="mark">
+        @izam.susilo
+      </a>
+
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
+      <script src="https://cdn.jsdelivr.net/g/filesaver.js"></script>
+      <script>
+        $(document).ready(function() {
+            $("#downloadBMI").click(function() {
+                domtoimage.toBlob(document.getElementById('contentBMI')).then(function(blob) {
+                    window.saveAs(blob, "ImageBMI.png")
+                })
+            })
+        })
+    </script>
+      <script src="js/script.js"></script>
+  </body>
+</div>
 </html>
