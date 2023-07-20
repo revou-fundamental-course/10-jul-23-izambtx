@@ -6,6 +6,8 @@
     <title>Kalkulator BMI</title>
     <link type="text/css" href="css/style.css" rel="stylesheet">
 </head>
+                
+<!-- BAGIAN BACKGROUND -->
 <div class="area" id="contentBMI">
     <ul class="circles">
         <li></li>
@@ -19,11 +21,14 @@
         <li></li>
         <li></li>
     </ul>
+    
   <body>
       <div class="row">
           <div class="container mt-5">
             <div class="master-container">
-              <div class="card cart">
+                
+              <!-- BAGIAN ATAS -->
+              <div class="card kalkulator">
                 <label class="title">Kalkulator BMI</label>
                 <div class="row">
                   <div class="col-6">
@@ -51,8 +56,11 @@
                   </div>
                 </div>
               </div>
-            
+                
+              <!-- BAGIAN BAWAH -->
               <div class="row">
+
+                <!-- BAGIAN BAWAH KIRI -->
                 <div class="card checkout col-5">
                   <label class="title">Personal Data</label>
                   <form class="form pb-3 px-3" method="post">
@@ -71,13 +79,13 @@
                       <div class="col-6">
                         <label for="berat"><b>Berat Badan (KG)</b></label>
                         <div class="input-group">
-                          <input type="number"  autocomplete="off" name="text" class="input" id="berat">
+                          <input type="number" pattern="[0-9]" autocomplete="off" name="text" class="input" id="berat">
                         </div>
                       </div>
                       <div class="col-6">
                         <label for="tinggi"><b>Tinggi Badan (CM)</b></label>
                         <div class="input-group">
-                          <input type="number"  autocomplete="off" name="text" class="input" id="tinggi">
+                          <input type="number" pattern="[0-9]" autocomplete="off" name="text" class="input" id="tinggi">
                         </div>
                       </div>
                     </div>
@@ -91,6 +99,8 @@
                     </div>
                   </form>
                 </div>
+                
+                <!-- BAGIAN BAWAH KANAN -->
                 <div class="card info col-6 ml-5">
                   <label class="title">Additional Info</label>
                   <div class="row">
@@ -117,7 +127,8 @@
             </div>
           </div>
       </div>
-      
+                
+      <!-- BAGIAN WATERMARK -->
       <a class="mark" href="https://www.instagram.com/izam.susilo/" target="_blank" style="display: flex;align-items: center;justify-content: center; text-align: center;text-decoration: none;">
           <img src="img/ig.png" style="width: 1rem;" alt="" srcset="">
           &nbsp;<b>izam.susilo</b>
@@ -134,7 +145,7 @@
                 })
             })
         })
-    </script>
+      </script>
       <script src="js/script.js"></script>
   </body>
 </div>
