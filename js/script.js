@@ -5,9 +5,13 @@ window.onload = () => {
     button.addEventListener("click", calculateBMI);
 };
 
-$(window).on("load", function() {
-    $(".loader-wrapper").fadeOut("slow");
-});
+$(document).ready(function() {
+    $("#downloadBMI").click(function() {
+        domtoimage.toBlob(document.getElementById('contentBMI')).then(function(blob) {
+            window.saveAs(blob, "ImageBMI.png")
+        })
+    })
+})
  
 function calculateBMI() {
  
