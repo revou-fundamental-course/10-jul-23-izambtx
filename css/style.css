@@ -655,6 +655,7 @@
     border-radius: 10px;
     padding: 0.3em;
     padding-left: 0.8em;
+    padding-right: 0.8em;
     width: 100%;
     box-shadow: inset 2px 5px 10px rgba(0,0,0,0.3);
     transition: 300ms ease-in-out;
