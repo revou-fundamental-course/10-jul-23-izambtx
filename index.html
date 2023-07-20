@@ -32,7 +32,7 @@
                 <label class="title">Kalkulator BMI</label>
                 <div class="row">
                   <div class="col-6">
-                      <img src="img/BMI-1024x569.png" style="width: 100%;" alt="BMI Pic" srcset="">
+                      <img src="img/BMI-1024x569.png" style="width: 100%; margin-left: 1rem;" alt="BMI Pic" srcset="">
                   </div>
                   <div class="col-6">
                     <div class="kalkulator-container">
@@ -137,15 +137,6 @@
       <script src="https://cdnjs.cloudflare.com/ajax/libs/dom-to-image/2.6.0/dom-to-image.min.js" integrity="sha512-01CJ9/g7e8cUmY0DFTMcUw/ikS799FHiOA0eyHsUWfOetgbx/t6oV4otQ5zXKQyIrQGTHSmRVPIgrgLcZi/WMA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
       <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
       <script src="https://cdn.jsdelivr.net/g/filesaver.js"></script>
-      <script>
-        $(document).ready(function() {
-            $("#downloadBMI").click(function() {
-                domtoimage.toBlob(document.getElementById('contentBMI')).then(function(blob) {
-                    window.saveAs(blob, "ImageBMI.png")
-                })
-            })
-        })
-      </script>
       <script src="js/script.js"></script>
   </body>
 </div>
